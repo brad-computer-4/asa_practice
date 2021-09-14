@@ -52,7 +52,7 @@ from config import account_one, mnemonic_one, token
 import json
 ip_address = 'https://testnet.algoexplorerapi.io'
 client = algod.AlgodClient(token, ip_address, headers={'User-Agent': 'hey'})
-account_info = client.account_info('37CHQNNBVHN2YZWU3ZBPVQ2DLYDYFDWYFBER3JUDP5XFS32TVJT3ZEXNE4')
+account_info = client.account_info(account_one)
 print(json.dumps(account_info, indent=4))
 
 account_balance = account_info.get('amount')
